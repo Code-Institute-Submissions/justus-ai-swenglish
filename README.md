@@ -1,7 +1,16 @@
 # swenglish
 milestone_project_2
 Introduction.
-The project  is  a picture aided quiz for children who are learning to be bilingual. The game  is divided  into three different levels.
+The project  is  a picture aided quiz for children who are learning to be bilingual. 
+HOME PAGE
+The home page  will start with a 
+##header,
+##controls area, 
+##question area,
+##score area.
+This format is similar to the love maths fromat because i could see the benefit of having all the features in onye page.
+ for direct feedback.This is especially attractive to children who would appreciate direct feedback.
+The game  is divided  into three different levels.
 1.beginner :five questions chosen randomly from fifteen questions on total .
 hi 
 come 
