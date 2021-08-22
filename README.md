@@ -17,27 +17,35 @@ This format is similar to the love maths format because i could see the benefit 
  :the direct feed back is rewarding for te kids This is especially attractive to children who would appreciate direct feedback.
 The game  is divided  into three different levels.
 1.beginner :five questions chosen randomly from fifteen questions on total .
-hi 
-come 
-go 
- eat 
-drink
-help
-welcome 
-goodbye.
-morning ,
-afternoon
-evening
-night 
-COLOURS
-black 
-white 
-red 
-blue
-green 
-yellow
-violet
-2. word associations:
+hi ....hej
+come ...kom
+go ...gå
+ eat ...ät
+drink...dryck
+help...hjälp
+welcome...välkomen 
+goodbye...hejdå
+morning...morgon
+afternoon...eftermiddad
+evening....kväll
+night ...natt
+COLOURS/Färg
+black ...svart
+white...vit
+red ...röd
+blue...blå
+green...grön 
+yellow...gyul
+violet...lilla
+days/dagar
+monday...måndag
+tuesday...tisdag
+wednesday...onsdag
+thursday...törsdag
+friday..fredag
+saturday....lördag
+sunday...söndag
+
 a)tree is____(options 1:yellow 
 B)fire truck is____
 c)the sky is_____
