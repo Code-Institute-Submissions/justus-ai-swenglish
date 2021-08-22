@@ -21,9 +21,10 @@ body {
 
 .game-area {
     background-color: #E6ECF0;
+    opacity: 0.1;
     box-sizing: border-box;
     width: 85%;
-    height: 65vh;
+    height: 80vh;
     max-height: 450px;
     max-width: 830px;
     margin-left: auto;
@@ -32,7 +33,7 @@ body {
 }
 
 .question-area {
-    width: 50%;
+    width: 80%;
     font-size: 2rem;
     margin: auto;
     padding: 50px 0;
@@ -72,8 +73,8 @@ body {
     border: none;
     color: #445361;
     display: inline-block;
-    height: 40px;
-    width: 80px;
+    height: 30px;
+    width: 70px;
     font-size: 1.2rem;
 }
 
