@@ -20,11 +20,11 @@ body {
 /* --------- Game layout */
 
 .game-area {
-    background-color: #E6ECF0;
-    opacity: 0.1;
+    background-color: #b3cf36;
+    opacity: 0.9;
     box-sizing: border-box;
     width: 85%;
-    height: 80vh;
+    height: 30vh;
     max-height: 450px;
     max-width: 830px;
     margin-left: auto;
