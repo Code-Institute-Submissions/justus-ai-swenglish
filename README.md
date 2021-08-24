@@ -14,7 +14,7 @@ Photo by Ryan Fields on Unsplash![ryan-fields-Xz7MMD5tZwA-unsplash](https://user
  in this area i  decided to divide the wwebsite into three levels.
  * the beginner level
  * middle level 
- * sentences..
+ * sentences.
  Inintially i had it at hard level but then i realised the word "hard level might intimidate som students into not trying it.
  all the above levels are represented by a button that you can click and come into the game at that level .
  I chose an area of questions that are easy to use for daily repetition to make the bginners stage managable.as shown below under the questions area
@@ -24,45 +24,45 @@ This format is similar to the love maths format because i could see the benefit 
 The game  is divided  into three different levels.
 ** beginner **
 :five questions chosen randomly from fifteen questions on total .
-* hi ....hej
-*come ...kom
-1. go ...1gå
- eat ...ät
-drink...dryck
-help...hjälp
-welcome...välkomen 
-goodbye...hejdå
-morning...morgon
-afternoon...eftermiddad
-evening....kväll
-night ...natt
-COLOURS/Färg
-black ...svart
-white...vit
-red ...röd
-blue...blå
-green...grön 
-yellow...gyul
-violet...lilla
-days/dagar
-monday...måndag
-tuesday...tisdag
-wednesday...onsdag
-thursday...törsdag
-friday..fredag
-saturday....lördag
-sunday...söndag
-
-a)tree is____(options 1:yellow 
-B)fire truck is____
-c)the sky is_____
-d)house is ________
-e)lime is _____
-f)the lamp is_____
-g)the fire tuck siren is ___
-h) i wake up in the _______
-i) go to bed in the _____-
-J)we sleep at ____
+1. hi ....hej
+2. come ...kom
+3. go ...1gå
+4.  eat ...ät
+5. drink...dryck
+6. help...hjälp
+7. welcome...välkomen 
+8. goodbye...hejdå
+9. morning...morgon
+10. afternoon...eftermiddad
+11. evening....kväll
+12.night ...natt
+### COLOURS/Färg
+1. black ...svart
+2. white...vit
+3. red ...röd
+4. blue...blå
+5. green...grön 
+6. yellow...gyul
+7. violet...lilla
+###DAYS /dagar
+1. monday...måndag
+2. tuesday...tisdag
+3. wednesday...onsdag
+4. thursday...törsdag
+5. friday..fredag
+6 .saturday....lördag
+7. sunday...söndag
+###SENTENCES 
+1. tree is____(options 1:yellow 
+2. fire truck is____
+3. the sky is_____
+4. house is ________
+5. lime is _____
+6. the lamp is_____
+7. the fire tuck siren is ___
+8.  i wake up in the _______
+9.  go to bed in the _____-
+10. we sleep at ____
 
 
 3.combining many words to make a sentence on their own 
