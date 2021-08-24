@@ -15,16 +15,18 @@ body {
 .logo {
     height: 40px;
     padding-right: 5px;
+border-radius: 20px;
 }
 
 /* --------- Game layout */
 
 .game-area {
-    background-color: #b3cf36;
+    background-color: #d4f543;
     opacity: 0.9;
     box-sizing: border-box;
+    border-radius: 20px;
     width: 85%;
-    height: 30vh;
+    height: 60vh;
     max-height: 450px;
     max-width: 830px;
     margin-left: auto;
@@ -88,7 +90,7 @@ body {
 .btn {
     width: 220px;
     height: 60px;
-    font-family: "Raleway", sans-serif;
+    font-family: 'Rampart One', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     color: white;
