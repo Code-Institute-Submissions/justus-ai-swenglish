@@ -19,32 +19,21 @@
         <img class="logo" src="assets/images/logo.jpg" style="width:50px;height:60px;"alt="logo"> Swenglish
     </h1>
 
-    <div class="game-area">
-        <div class="controls-area">
-            <button data-type="beginner" class="btn btn--big btn--green">
-                <i class="fas fa-power-off"></i>
-            </button>
-            <button data-type="middle" class="btn btn--big btn--blue">
-                <i class="fas fa-cookie-bite"></i>
-            </button>
-            <button data-type="more" class="btn btn--big btn--orange">
-                <i class="fas fa-paint-brush"></i>
-            </button>
-            
+    <div class="container">
+        <div id="question-container" class="hide">
+         <div id="question">Question</div>
+         <div id="answer.buttons" class="btn-grid">
+         <button class="btn">answer 1</button>
+         <button class="btn">answer 2</button>
+         <button class="btn">answer 3</button>
+         <button class="btn">answer 4</button>
         </div>
-    <div class="question-area">
-        <span id="operand1">swe  
-        <span>=</span>
-        <p class="answer-message" >Enter Answer:</p>
-        <input id="answer-box" type="text" value="english">
     </div>
-    <button data-type="submit" class="btn btn--gray">Submit Answer</button>
-</div>
-
-
-    <div class="score-area">
-        <p class="scores">Correct Answers <span id="score">0</span></p>
-        <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
+          <div class="controls">
+<buttton id="start-btn" class="start-btn btn"> start</buttton>
+<button id="next-btn" class="next-btn btn hide">Next</button>
+          </div>
+        </div>
     </div>
 
     <script src="assets/js/script.js"></script>
