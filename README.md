@@ -1,6 +1,5 @@
 # swenglish
-## ilestone_project_2
-Introduction.
+## Introduction.
 The project  is  a picture aided quiz for children who are learning to be bilingual. 
 HOME PAGE
 The home page  will start with a 
@@ -22,6 +21,8 @@ Photo by Ryan Fields on Unsplash![ryan-fields-Xz7MMD5tZwA-unsplash][Link](https:
 This format is similar to the love maths format because i could see the benefit of having all the features in one page.
  :the direct feed back is rewarding for te kids .This is especially attractive to children who would appreciate direct feedback asit is in many games .
 The game  is divided  into three different levels.
+##JAVASCRIPT
+1. The purpose of javascript in this game is to be able to make the game to connect to the different levels of the game.
 ** beginner **
 :five questions chosen randomly from fifteen questions on total .
 1. hi ....hej
@@ -52,24 +53,28 @@ The game  is divided  into three different levels.
 5. friday..fredag
 6 .saturday....lördag
 7. sunday...söndag
-###SENTENCES 
-1. tree is____(options 1:yellow 
-2. fire truck is____
-3. the sky is_____
-4. house is ________
-5. lime is _____
-6. the lamp is_____
-7. the fire tuck siren is ___
-8.  i wake up in the _______
-9.  go to bed in the _____-
-10. we sleep at ____
+####Months/månader 
+1. january____januari
+2. february ____februari
+3. march_____mars
+4. april ________april
+5. may _____mai
+6. june_____juni
+7. july ___juli
+8.  august_______agusti
+9.  september _____september-
+10. october ____october
+11. november___november
+12. december____december
+##changes
+after a while i realsieed for the age group i am targeting(4-6)using sentences will be much harder than if they increased their diction in English. So i eventually removed the sentences as a challenge 
+in  the javascript . i had yhe following funtions that i wanted to run:
+1. function runGame() { }
+2. function checkAnswer() { }
+3. funtion calculateCorrectAnswer () { }
+4. function incrementScore() { }
+5. function incrementWrongAnswer() {}
+ 6.function displayBeginnerQuestions() { }
+ 7.function displayMediumQuestions() {}
+ 8. function displayMoreQuestions() {}
 
-
-3.combining many words to make a sentence on their own 
-a)say__ to the neighbour in the __house.(hi,white)
-b)Say___to your friends before you leave.(bye)
-c) Mom will____ to pick you up from school.(come)
-d)The ___fire truck has a ___ siren.(red,blue)
-e)can i ____you with your homework?(help)
-f)its kind to say__ to the neighbours when they pass by.(hi)
-g)We ___breakfast eery morning before school(eat
