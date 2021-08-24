@@ -1,5 +1,5 @@
 # swenglish
-milestone_project_2
+## ilestone_project_2
 Introduction.
 The project  is  a picture aided quiz for children who are learning to be bilingual. 
 HOME PAGE
@@ -10,7 +10,7 @@ Photo by saeed karimi on Unsplash![saeed-karimi-JrrWC7Qcmhs-unsplash](https://us
 
 
 Photo by Ryan Fields on Unsplash![ryan-fields-Xz7MMD5tZwA-unsplash](https://user-images.githubusercontent.com/83753891/130231263-6183ac84-2b5b-4b4e-bbd7-c5223407a5fe.jpg)
-levels area.
+### levels area.
  in this area i  decided to divide the wwebsite into three levels.
  1.the beginner level
  2.middle level 
@@ -22,10 +22,11 @@ levels area.
 This format is similar to the love maths format because i could see the benefit of having all the features in one page.
  :the direct feed back is rewarding for te kids .This is especially attractive to children who would appreciate direct feedback asit is in many games .
 The game  is divided  into three different levels.
-1.beginner :five questions chosen randomly from fifteen questions on total .
-hi ....hej
-come ...kom
-go ...gå
+** beginner **
+:five questions chosen randomly from fifteen questions on total .
+1.hi ....hej
+2.come ...kom
+go ...1gå
  eat ...ät
 drink...dryck
 help...hjälp
