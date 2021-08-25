@@ -1,13 +1,11 @@
-# swenglish
+# Swenglish
 ## Introduction.
 The project  is  a color activated  aided quiz for children who are learning to be bilingual. 
 HOME PAGE
 The home page  will start with a 
-##header
-
-Photo by saeed karimi on Unsplash![saeed-karimi-JrrWC7Qcmhs-unsplash][Link](https://user-images.githubusercontent.com/83753891/130230147-f5193dfc-4da8-4595-8fa7-af70795f732e.jpg)
-
-
+##header 
+title of swenglish
+and the lgo image of a child stacking up word block,I got the pixture from unsplash:
 Photo by Ryan Fields on Unsplash![ryan-fields-Xz7MMD5tZwA-unsplash][Link](https://user-images.githubusercontent.com/83753891/130231263-6183ac84-2b5b-4b4e-bbd7-c5223407a5fe.jpg)
 ### questions area.
  
