@@ -16,9 +16,11 @@ my initial format is similar to the love maths format because i could see the be
  :the direct feed back is rewarding for the kids .This is especially attractive to children who would appreciate direct feedback as is the case in the popular games .
  the questions will have four choices to choose from  to deduce the correct answer.
  hue feature was also fundermental feature that i used to show a grey color when the questions have not been clicked on courtesy of [Link] https://auth0.com/blog/how-to-control-hue-lights-with-javascript/
- ##difficulties witht the code
+ ## difficulties with the code
  1. i was able to achieve the hue for the neutral color but had trouble getting the hue for when the answer is worn and correct.So ater speaking to student care , i ws abe to figure out that i had t declare enter the background color each time i was wrting the code on css. the ::root was not enough on its own to run the background colors as was shown on the youtube video [Link]https://www.youtube.com/watch?v=riDzcEQbX6k
-###controls area
+ #### shuffled questions
+ i put in a shuffle questions funtion so that thegame always starts witha a different question. credit to [Link]https://www.youtube.com/watch?v=riDzcEQbX6k
+### controls area
 start button and the next button(still considering qhther or not it is bad idea to show the next button).
 ##JAVASCRIPT
 1. The purpose of javascript in this game is to be able to make the game to connect to the different levels of the game.
