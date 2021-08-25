@@ -1,15 +1,17 @@
 //starting game 
  
 
+let startButton=document.getElementById ("start.btn")
+let questionContainerElement=getElementById("question-container")
+startButton.addEventListener ("click",startGame)
+function startGame () {
+    console.log("started")
+    startButton.classList.add("hide")
+    questionContainerElement.classList, remove ("hide")
+    setNextQuestion ()
+  }
 
-function runGame() {  }
-let beginnerButton=document.getElementsByClassName("btn btn--big btn--green")
-let questionarea=document.getElementById("operand1")
-
-beginnerButton=(addEventListener)("click", startGame)
-
-function startGame() {  
-console.log("started")
+funtion setNextQuestion () {
 }
 // Creates two paralell arrays to compare between swedish and english words for the basic level
 let engOne = ["hi", "come", "go", "eat", "drink", " help", "welcome", "goodbye", "morning ", "afternoon", "evening", "night"];
