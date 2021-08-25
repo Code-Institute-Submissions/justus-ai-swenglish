@@ -1,6 +1,6 @@
 # swenglish
 ## Introduction.
-The project  is  a picture aided quiz for children who are learning to be bilingual. 
+The project  is  a color activated  aided quiz for children who are learning to be bilingual. 
 HOME PAGE
 The home page  will start with a 
 ##header
@@ -9,18 +9,17 @@ Photo by saeed karimi on Unsplash![saeed-karimi-JrrWC7Qcmhs-unsplash][Link](http
 
 
 Photo by Ryan Fields on Unsplash![ryan-fields-Xz7MMD5tZwA-unsplash][Link](https://user-images.githubusercontent.com/83753891/130231263-6183ac84-2b5b-4b4e-bbd7-c5223407a5fe.jpg)
-### levels area.
- in this area i  decided to divide the wwebsite into three levels.
- * the beginner level
- * middle level 
- * sentences.
- Inintially i had it at hard level but then i realised the word "hard level might intimidate som students into not trying it.
- all the above levels are represented by a button that you can click and come into the game at that level .
- I chose an area of questions that are easy to use for daily repetition to make the bginners stage managable.as shown below under the questions area
-##question area,
-This format is similar to the love maths format because i could see the benefit of having all the features in one page.
- :the direct feed back is rewarding for te kids .This is especially attractive to children who would appreciate direct feedback asit is in many games .
-The game  is divided  into three different levels.
+### questions area.
+ 
+ 
+my initial format is similar to the love maths format because i could see the benefit of having all the features in one page.also i watched some videos done by #QuizApp #WDS #JavaScript on the visual funtionality of color coded screen ie green for correct and red for wrong.
+ :the direct feed back is rewarding for the kids .This is especially attractive to children who would appreciate direct feedback as is the case in the popular games .
+ the questions will have four choices to choose from  to deduce the correct answer.
+ hue feature was also fundermental feature that i used to show a grey color when the questions have not been clicked on courtesy of [Link] https://auth0.com/blog/how-to-control-hue-lights-with-javascript/
+ ##difficulties witht the code
+ 1. i was able to achieve the hue for the neutral color but had trouble getting the hue for when the answer is worn and correct.So ater speaking to student care , i ws abe to figure out that i had t declare enter the background color each time i was wrting the code on css. the ::root was not enough on its own to run the background colors as was shown on the youtube video [Link]https://www.youtube.com/watch?v=riDzcEQbX6k
+###controls area
+start button and the next button(still considering qhther or not it is bad idea to show the next button).
 ##JAVASCRIPT
 1. The purpose of javascript in this game is to be able to make the game to connect to the different levels of the game.
 ** beginner **
