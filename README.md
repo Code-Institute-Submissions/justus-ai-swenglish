@@ -20,6 +20,10 @@ my initial format is similar to the love maths format because i could see the be
  1. i was able to achieve the hue for the neutral color but had trouble getting the hue for when the answer is worn and correct.So ater speaking to student care , i ws abe to figure out that i had t declare enter the background color each time i was wrting the code on css. the ::root was not enough on its own to run the background colors as was shown on the youtube video [Link]https://www.youtube.com/watch?v=riDzcEQbX6k
  #### shuffled questions
  i put in a shuffle questions funtion so that thegame always starts witha a different question. credit to [Link]https://www.youtube.com/watch?v=riDzcEQbX6k
+ #### claring old answers
+ so for each time a player entered their anser, the game saved their anser, in order to clear that i used the resetState function that rests everything to the default state each time the player clicks on a new question.
+ ####
+ had trouble connecting html and javascript witht he start button, withthe help of tutor assistance and using f12 to check my console, i was able to get to the bottom of it and fixed it )
 ### controls area
 start button and the next button(still considering qhther or not it is bad idea to show the next button).
 ##JAVASCRIPT
