@@ -71,8 +71,8 @@ function selectAnswer (e) {
     startButton.classList.remove="hide"
   }
 }
-  nextButton.classList.remove("hide")
-}
+  
+
 function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
