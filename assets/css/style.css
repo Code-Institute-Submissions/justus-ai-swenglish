@@ -14,48 +14,54 @@ body {
     align-items: center;
     padding: 0;
     margin:0;
-    display: flex;
     justify-content: center;
     width: 70vh;
     height: 100vh;
     background-color: hsl(var(--hue-neutral),100%,20%);
 
 }
-body.correct { 
+.correct { 
     background-color: hsl(var(--hue-correct),100%,20%);
 
  }
- body.wrong { 
+ .wrong { 
     background-color: hsl(var(--hue-wrong),100%,20%);
  }
-/* --------- Heading */
+/* ---------  styling Heading */
 
-.heading {
-    text-align: center;
-    font-size: 2.5rem;
+.heading-container {
+    margin-left: 70px;
 }
 
 .logo {
-    height: 200px
-    padding-right: 5px;
-border-radius: 2px;
+    margin-top: 0%;
+    border-radius: 7px;
+    display :flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* --------- question and answer area */
 .container  {
-    width: 600px;
-    max-width: 50%;
-    background-color: khaki;
-border-radius: 15px;
+width: 800px;
+max-width: 80%;
+display :flex;
+justify-content: center;
+align-items: center;
+background-color: khaki;
+border-radius: 10px;
 padding: 10px;
 box-shadow: 0 0 10px 2px;
 }
 /* --------- styling buttons */
 .btn.grid {
     display: grid;
+    align-items: center;
+    justify-content: center;
     grid-template-columns: repeat(2, auto);
     gap: 10px;
     margin: 20px 0;
+
 }
 .btn {
     --hue:var(--hue-neutral) ;
@@ -68,11 +74,11 @@ box-shadow: 0 0 10px 2px;
    border-color: whitesmoke;
 }
 .btn.correct {
-    background-color: hsl(var(--hue-correct),100%,20%);
+    --hue: var(--hue-correct);
     color: black;
  }
  .btn.wrong {
-    background-color: hsl(var(--hue-wrong),100%,20%);
+    --hue:var(--hue-wrong);
     color: black;
     
  }
