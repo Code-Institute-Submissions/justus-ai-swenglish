@@ -64,8 +64,10 @@ in  the javascript . i had yhe following funtions that i wanted to run:
 4. answerButtons
 
 5. shuffled Questions
-6.restart
-###media query
+
+6. restart
+
+### Media query
 for a responsive screen size i reduced the size of the logo 
 and the width of the button container as shown below![Screenshot (297)](https://user-images.githubusercontent.com/83753891/130902095-b75cdf85-8a63-47a2-b838-057408390ccb.png)
 
