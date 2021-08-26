@@ -1,8 +1,10 @@
 
+
 # Swenglish
 ## Introduction.
 The project  is  a color activated  aided quiz for children who are learning to be bilingual. 
 HOME PAGE
+![Screenshot (298)](https://user-images.githubusercontent.com/83753891/130938788-23441287-7dee-44f6-9039-a114d29195c3.png)
 
 The home page  will start with a 
 ##header 
@@ -67,6 +69,17 @@ in  the javascript . i had yhe following funtions that i wanted to run:
 for a responsive screen size i reduced the size of the logo 
 and the width of the button container as shown below![Screenshot (297)](https://user-images.githubusercontent.com/83753891/130902095-b75cdf85-8a63-47a2-b838-057408390ccb.png)
 
-###testing the website running
-I tested the websote severally on gitpod to see wheter it had some ssues, and was able to correct all of them.
-the website runs well and has no errors on the console.
+###validator testing
+1. HTML-No errors were returned when passing through the official w3c validator
+2. CSS-No errors were returned when passing through the official w3c validator
+3. javascript on the console after pressing f12 , no errors passing through there either.
+
+### Deployment
+
+This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub) 
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the GitHub repository, navigate to the Settings tab 
+  - From the source section drop-down menu, select the Master Branch
+  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+
