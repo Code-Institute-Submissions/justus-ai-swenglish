@@ -35,6 +35,15 @@ I had trouble connecting html and javascript to he start button. The datset func
 consists of a :
 start button and a next button.
 The next button is hdden and only activated when the game has started .
+###QUIZ INSTRUCTIONS
+1. press the start button
+2. the quiz is activated withthe first random question with mutiple questions and start button dissapears
+3. when the player clicks on the right answer , the background screen turns green.
+4. when the player clicks the wrong answer , the background turns red.
+5. the game continues whther you click the right or te wrong answer with the next button on clicking wither option.
+6. the game goes on until you see the restard button eaning ithe end of the question list.
+7. the point of the game is to maintain a green screen always and avoid having redscreen background.
+8. goodluck
 ##JAVASCRIPT
 1. The purpose of javasript is to activate the interactive game with 20 random prewritten questions.
 2, the start button launches the game that has four multiple choices.
