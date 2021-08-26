@@ -3,8 +3,6 @@
 ## Introduction.
 The project  is  a color activated  aided quiz for children who are learning to be bilingual. 
 HOME PAGE
-![Screenshot (293)](https://user-images.githubusercontent.com/83753891/130900808-7da690ca-fba7-4b10-a15e-f3eb27dd9310.png)
-# Swenglish![Screenshot (295)](https://user-images.githubusercontent.com/83753891/130901019-2d3f2a67-582c-450b-9555-8b6cea51591a.png)
 
 The home page  will start with a 
 ##header 
@@ -17,8 +15,8 @@ Photo by Ryan Fields on Unsplash![ryan-fields-Xz7MMD5tZwA-unsplash][Link](https:
 
  if question is answed correctly
  
-* My initial form![Screenshot (294)](https://user-images.githubusercontent.com/83753891/130901089-49e2a192-0f18-45e6-9d74-456fe3054fba.png)
-at was similar to the love maths format because i could see the benefit of having all the features in one page.
+* ![Screenshot (294)](https://user-images.githubusercontent.com/83753891/130901089-49e2a192-0f18-45e6-9d74-456fe3054fba.png)
+my itial from was similar to the love maths format because i could see the benefit of having all the features in one page.
 * I also wanted to divide the game into different levels ; however i had to rencinsder not to complicate my code and eventually not finish in good time.
 * With the help of my subsidiary mentor, as my current mentor is on leave , we discussed a simpler format of one level and several random questions.
 * The fact that its a childrens game also had me considering whether having scores will be helpful or dscouraging tothe younger players,evntually opted not to have scores but still have a n interactive colorful website.
@@ -60,4 +58,6 @@ in  the javascript . i had yhe following funtions that i wanted to run:
 for a responsive screen size i reduced the size of the logo 
 and the width of the button container as shown below![Screenshot (297)](https://user-images.githubusercontent.com/83753891/130902095-b75cdf85-8a63-47a2-b838-057408390ccb.png)
 
-
+###testing the website running
+I tested the websote severally on gitpod to see wheter it had some ssues, and was able to correct all of them.
+the website runs well and has no errors on the console.
