@@ -21,6 +21,7 @@ nextButton.addEventListener ("click",()=> {
 })
 
 function startGame ()  {
+  startButton.classList.add("hide")
    
     shuffledQuestions =question.sort (() => Math.random()- .5 )
    
@@ -50,6 +51,7 @@ function showQuestion(question) {
   } )
  }
  function resetState (){
+   clearStatusClass(document.body)
    nextButton.classList.add("hide")
    while(answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild)
@@ -57,13 +59,18 @@ function showQuestion(question) {
 }
 function selectAnswer (e) {
   let selectedButton=e.target
-  console.log(selectedButton)
   let correct =selectedButton.dataset.correct
   setStatusClass(document.body, correct)
   Array.from(answerButtonsElement.children).forEach(button=> {
-    console.log(button.dataset.correct);
     setStatusClass (button, button.dataset.correct)
   })
+  if (shuffledQuestions.length > currentQuestionIndex +1) { 
+    nextButton.classList.remove("hide")
+  } else{
+    startButton.innerText="Restart"
+    startButton.classList.remove="hide"
+  }
+}
   nextButton.classList.remove("hide")
 }
 function setStatusClass(element, correct) {
@@ -78,7 +85,7 @@ function clearStatusClass (element) {
   element.classList.remove("correct")
  element.classList.remove("wrong")
 }
-
+// Creates two paralell arrays to compare between swedish and english words for the basic level
 let question=[
   { question:"hej",
   answers: [
@@ -102,7 +109,7 @@ answers: [
     { text: "afternoon", correct: false},
   ]
 }
-    { question:"hjälp",
+    ,{ question:"hjälp",
     answers: [
       { text: "go", correct: false},
         { text: "come", correct: false},
@@ -207,9 +214,6 @@ answers: [
 }
 
 ]
-}];
-// Creates two paralell arrays to compare between swedish and english words for the basic level
-let engOne = ["hi", "come", "go", "eat", "drink", " help", "welcome", "goodbye", "morning ", "afternoon", "evening", "night"];
-let swedOne = ["hej", "kom", "gå", "ät", "dryck", "hjälp", "välkommen", "hejdå", "morgon", "eftermiddag", "kväll", "natt"];
+
 
 

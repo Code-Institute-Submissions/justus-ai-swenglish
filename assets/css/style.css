@@ -9,13 +9,12 @@
 }
 body {
     --hue:var(--hue-neutral);
-    font-family: 'Rampart One', cursive;
+    font-family: 'Fredericka the Great', cursive;
     text-align: center;
     align-items: center;
     padding: 0;
     margin:0;
     justify-content: center;
-    width: 70vh;
     height: 100vh;
     background-color: hsl(var(--hue-neutral),100%,20%);
 
@@ -36,7 +35,6 @@ body {
 .logo {
     margin-top: 0%;
     border-radius: 7px;
-    display :flex;
     align-items: center;
     justify-content: center;
 }
@@ -52,15 +50,16 @@ background-color: khaki;
 border-radius: 10px;
 padding: 10px;
 box-shadow: 0 0 10px 2px;
+margin: auto;
 }
 /* --------- styling buttons */
-.btn.grid {
+.btn-grid {
     display: grid;
     align-items: center;
     justify-content: center;
     grid-template-columns: repeat(2, auto);
     gap: 10px;
-    margin: 20px 0;
+    margin:auto;
 
 }
 .btn {
@@ -69,6 +68,7 @@ box-shadow: 0 0 10px 2px;
     border-radius: 7px;
     padding: 5px 10px;
     outline: rgb(252, 250, 248);
+    margin:auto;
  }
 .btn:hover {
    border-color: whitesmoke;
@@ -96,9 +96,15 @@ box-shadow: 0 0 10px 2px;
      }
 /* --------- Media queries */
 
-@media (max-width: 414px) {
-    .heading {
-       margin-right :10px ;
+ @media screen and (max-width: 800px) {
+    .logo {
+      flex: 50%;
+      max-width: 60%;
+      max-height: 50%;
     }
-
-}
+    .container {
+        flex: 50%;
+        max-width: 50%;
+      }
+  }
+  
