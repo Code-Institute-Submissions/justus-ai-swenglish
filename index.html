@@ -11,15 +11,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Welcome</title>
 </head>
 
 <body>
-    <img class="logo" src="assets/images/logo.jpg" style="width:360px;height:360px;"alt="logo">
-    <h1 class="heading-container"> Swenglish
-    </h1>
-
     <div class="container">
+        <div id="home" class="flex-column flex-center">
+    <img class="logo" src="assets/images/logo.jpg" style="height:360px;"alt="logo">
+    <h1 class="heading-container"> Swenglish </h1>
+    <a href="/game.html" class="btn">Play</a>
+    <a href="/highscores.html" id ="highscore-btn" class="btn">High Scores<i class="fas-fa crown"></i></a>
+
         <div id="question-container" class="hide">
          <div id="question">Question</div>
          <div id="answer-buttons" class="btn-grid">
@@ -35,7 +37,7 @@
           </div>
         </div>
     </div>
-
+</div>
     <script src="assets/js/script.js"></script>
 </body>
 

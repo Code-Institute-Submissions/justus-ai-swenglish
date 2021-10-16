@@ -4,6 +4,11 @@
 ## Introduction.
 The project  is  a color activated  aided quiz for children who are learning to be bilingual. 
 HOME PAGE
+This website is built to  create interest in learning English  for children who speak Swedish as a first language.
+In sweden children generally do not learn English in school until when they turn 7 years old.
+Each school deciced when they will start to to tesch english And othre can strt as late as 10 years old .
+Even then , not all  speak it even with addition of English to their syllabus.
+With the  current globalisation and game inspired ways of learning, a game for children of earlier ages (4 years old and older; or younger based on individual reading ability.)
 ![Screenshot (298)](https://user-images.githubusercontent.com/83753891/130938788-23441287-7dee-44f6-9039-a114d29195c3.png)
 ##header 
 title= swenglish
