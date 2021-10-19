@@ -235,9 +235,38 @@ getNewQuestion=() => {
 
 
 questionsCounter++
-progressText.innerText=  `Question ${questionsCounter}of ${MAX_QUESTIONS}´
-progressBarFull.style.width= `$ {(questionsCounter/MAX_QUESTIONS)*100}%´
+progressText.innerText=  `Question ${questionCounter}of ${MAX_QUESTIONS}´
+progressBarFull.style.width= `$ {(questionCounter/MAX_QUESTIONS)*100}%´
 let questionsIndex=Math.floor(Math.random()*availableQuestions.length)
 currentQuestions=availableQuestions [questionsIndex]
+question.innerText=currentQuestion.question
+choices.forEach(Choice=>{
+  let number=choice.dataset ['number']
+  choice.innerText=currentQuestion ['choice'+number]
+})
+availableQuestions.splice(questionsIndex,1)
+acceptingAnswers=true
 };
+choices.forEach(Choice=>{
+  choice.addEventListener('click',e =>{
+    if(!acceptingAnswers) return
+    
+    acceptingAnswers=false
+    let selectedChoice=e.target
+    let selectedAnswer=selectedChoice.dataset ['number']
+    
+    let classToApply=selectedAnswer==currentQuestion.answer ?'correct':'incorrect'
+    if(classToApply==='correct'){
+      incrementscore(SCORE_POINTS)}
+      selectedChoice.parentElement.classList.add(classToApply)
+      setTimeout(()=>{
+        selectedChoice.parentElement.classList.remove(classToApply)
+        getNewQuestion()
+      },1000)
+    )}
+)}
 
+incrementscore=num=> {
+  score +=num
+  scoreText.innerText=score
+}
