@@ -3,24 +3,26 @@
 //starting game 
  
 
-let startButton=document.getElementById ("start-btn")
+let startButton=document.getElementById ("start-btn");
 
-let nextButton=document.getElementById ("next-btn")
+let nextButton=document.getElementById ("next-btn");
 
-let questionContainerElement=document.getElementById("question-container")
+let questionContainerElement=document.getElementById("question-container");
 
-let questionElement=document.getElementById("question")
+let questionElement=document.getElementById("question");
 
-let answerButtonsElement=document.getElementById("answer-buttons")
+let answerButtonsElement=document.getElementById("answer-buttons");
 
-let shuffledQuestions, currentQuestionIndex
+let scoreText=document.querySelector('#score');
+let progressBarFull=document.querySelector("#progressBarFull");
+let shuffledQuestions, currentQuestionIndex ;
 
-startButton.addEventListener ("click", startGame)
+startButton.addEventListener ("click", startGame);
 
 nextButton.addEventListener ("click",()=> {
   currentQuestionIndex++
   setNextQuestion()
-})
+});
 
 function startGame ()  {
   startButton.classList.add("hide")
@@ -31,12 +33,12 @@ function startGame ()  {
    
     questionContainerElement.classList. remove ("hide")
     setNextQuestion()
-  }
+  };
 
 function setNextQuestion() {
   resetState()
   showQuestion(shuffledQuestions[currentQuestionIndex])
-}
+};
 
 function showQuestion(question) {
   questionElement.innerText=question.question
@@ -51,14 +53,14 @@ function showQuestion(question) {
     answerButtonsElement.appendChild(button)
 
   } )
- }
+ };
  function resetState (){
    clearStatusClass(document.body)
    nextButton.classList.add("hide")
    while(answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild)
   }
-}
+};
 function selectAnswer (e) {
   let selectedButton=e.target
   let correct =selectedButton.dataset.correct
@@ -72,7 +74,7 @@ function selectAnswer (e) {
     startButton.innerText="Restart"
     startButton.classList.remove="hide"
   }
-}
+};
   
 
 function setStatusClass(element, correct) {
@@ -207,7 +209,7 @@ answers: [
 ]
 },
 { question:"hejdå",
-answers: [
+answers:[ 
   { text: "drink", correct: false},
     { text: "swallow", correct: false},
   { text: "enjoy", correct: false},
@@ -215,7 +217,27 @@ answers: [
 ]
 }
 
-]
+];
+let SCORE_POINTS=100;
+let MAX_QUESTIONS=16;
+startGame=()=> {
+  questionCounter=0
+  score=0
+  availableQuestions =[...questions]
+  getNewQuestion()
+};
+/* keeping track of the score*/
+getNewQuestion=() => {
+  if (availableQuestions.length ===0 ||questionsCounter >MAX_QUESTIONS) {
+    localStorage.setItem('mostRecentScore',score)
+    return window.location.assign('/end.html')
+}
 
 
+questionsCounter++
+progressText.innerText=  `Question ${questionsCounter}of ${MAX_QUESTIONS}´
+progressBarFull.style.width= `$ {(questionsCounter/MAX_QUESTIONS)*100}%´
+let questionsIndex=Math.floor(Math.random()*availableQuestions.length)
+currentQuestions=availableQuestions [questionsIndex]
+};
 
