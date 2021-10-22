@@ -16,6 +16,8 @@ let answerButtonsElement=document.getElementById("answer-buttons");
 let scoreText=document.querySelector('#score');
 let progressBarFull=document.querySelector("#progressBarFull");
 let shuffledQuestions, currentQuestionIndex ;
+let SCORE_POINTS=100;
+let MAX_QUESTIONS=16;
 
 startButton.addEventListener ("click", startGame);
 
@@ -30,15 +32,19 @@ function startGame ()  {
     shuffledQuestions =question.sort (() => Math.random()- .5 )
    
     currentQuestionIndex = 0
-   
+    questionCounter=0
+    score=0
     questionContainerElement.classList. remove ("hide")
     setNextQuestion()
   };
+ 
+  
 
 function setNextQuestion() {
   resetState()
   showQuestion(shuffledQuestions[currentQuestionIndex])
 };
+
 
 function showQuestion(question) {
   questionElement.innerText=question.question
@@ -46,13 +52,13 @@ function showQuestion(question) {
     let button=document.createElement("button")
     button.innerText=answer.text
     button.classList.add("btn")
-    if (answer.correct) {
+    if (answer.correct) 
+{
       button.dataset.correct=answer.correct
     }
     button.addEventListener("click", selectAnswer)
     answerButtonsElement.appendChild(button)
-
-  } )
+  })
  };
  function resetState (){
    clearStatusClass(document.body)
@@ -218,55 +224,5 @@ answers:[
 }
 
 ];
-let SCORE_POINTS=100;
-let MAX_QUESTIONS=16;
-startGame=()=> {
-  questionCounter=0
-  score=0
-  availableQuestions =[...questions]
-  getNewQuestion()
-};
+
 /* keeping track of the score*/
-getNewQuestion=() => {
-  if (availableQuestions.length ===0 ||questionsCounter >MAX_QUESTIONS) {
-    localStorage.setItem('mostRecentScore',score)
-    return window.location.assign('/end.html')
-}
-
-
-questionsCounter++
-progressText.innerText=  `Question ${questionCounter}of ${MAX_QUESTIONS}´
-progressBarFull.style.width= `$ {(questionCounter/MAX_QUESTIONS)*100}%´
-let questionsIndex=Math.floor(Math.random()*availableQuestions.length)
-currentQuestions=availableQuestions [questionsIndex]
-question.innerText=currentQuestion.question
-choices.forEach(Choice=>{
-  let number=choice.dataset ['number']
-  choice.innerText=currentQuestion ['choice'+number]
-})
-availableQuestions.splice(questionsIndex,1)
-acceptingAnswers=true
-};
-choices.forEach(Choice=>{
-  choice.addEventListener('click',e =>{
-    if(!acceptingAnswers) return
-    
-    acceptingAnswers=false
-    let selectedChoice=e.target
-    let selectedAnswer=selectedChoice.dataset ['number']
-    
-    let classToApply=selectedAnswer==currentQuestion.answer ?'correct':'incorrect'
-    if(classToApply==='correct'){
-      incrementscore(SCORE_POINTS)}
-      selectedChoice.parentElement.classList.add(classToApply)
-      setTimeout(()=>{
-        selectedChoice.parentElement.classList.remove(classToApply)
-        getNewQuestion()
-      },1000)
-    )}
-)}
-
-incrementscore=num=> {
-  score +=num
-  scoreText.innerText=score
-}
