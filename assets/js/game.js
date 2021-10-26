@@ -16,7 +16,7 @@ let answerButtonsElement=document.getElementById("answer-buttons");
 let scoreText=document.querySelector('#score');
 let progressBarFull=document.querySelector("#progressBarFull");
 let shuffledQuestions, currentQuestionIndex ;
-let SCORE_POINTS=100;
+let score=16;
 let MAX_QUESTIONS=16;
 
 startButton.addEventListener ("click", startGame);
@@ -37,14 +37,16 @@ function startGame ()  {
     questionContainerElement.classList. remove ("hide")
     setNextQuestion()
   };
- 
   
-
 function setNextQuestion() {
   resetState()
   showQuestion(shuffledQuestions[currentQuestionIndex])
 };
 
+function updateScore(){
+  score +=1;
+  scoreText.innerText=score;
+};
 
 function showQuestion(question) {
   questionElement.innerText=question.question
@@ -74,6 +76,9 @@ function selectAnswer (e) {
   Array.from(answerButtonsElement.children).forEach(button=> {
     setStatusClass (button, button.dataset.correct)
   })
+  if(correct){
+    updateScore();
+  }
   if (shuffledQuestions.length > currentQuestionIndex +1) { 
     nextButton.classList.remove("hide")
   } else{
@@ -226,3 +231,4 @@ answers:[
 ];
 
 /* keeping track of the score*/
+
