@@ -1,232 +1,258 @@
 
 /* jshint esversion: 8*/
 //starting game 
- 
 
-let startButton=document.getElementById ("start-btn");
 
-let nextButton=document.getElementById ("next-btn");
+let startButton = document.getElementById("start-btn");
 
-let questionContainerElement=document.getElementById("question-container");
+let nextButton = document.getElementById("next-btn");
 
-let questionElement=document.getElementById("question");
+let questionContainerElement = document.getElementById("question-container");
 
-let answerButtonsElement=document.getElementById("answer-buttons");
+let questionElement = document.getElementById("question");
 
-let scoreText=document.querySelector('#score');
-let progressBarFull=document.querySelector("#progressBarFull");
-let shuffledQuestions, currentQuestionIndex ;
-let score=16;
-let MAX_QUESTIONS=16;
+let answerButtonsElement = document.getElementById("answer-buttons");
 
-startButton.addEventListener ("click", startGame);
+let scoreText = document.querySelector('#score');
+let progressBarFull = document.querySelector("#progressBarFull");
+let shuffledQuestions, currentQuestionIndex;
+let score = 16;
+let MAX_QUESTIONS = 16;
 
-nextButton.addEventListener ("click",()=> {
+startButton.addEventListener("click", startGame);
+
+nextButton.addEventListener("click", () => {
   currentQuestionIndex++
   setNextQuestion()
 });
 
-function startGame ()  {
+function startGame() {
   startButton.classList.add("hide")
-   
-    shuffledQuestions =question.sort (() => Math.random()- .5 )
-   
-    currentQuestionIndex = 0
-    questionCounter=0
-    score=0
-    questionContainerElement.classList. remove ("hide")
-    setNextQuestion()
-  };
-  
+
+  shuffledQuestions = question.sort(() => Math.random() - .5)
+
+  currentQuestionIndex = 0
+  questionCounter = 0
+  score = 0
+  MAX_QUESTIONS = 16
+  SCORE_POINTS = 16
+  questionContainerElement.classList.remove("hide")
+  setNextQuestion()
+};
+
 function setNextQuestion() {
   resetState()
   showQuestion(shuffledQuestions[currentQuestionIndex])
 };
 
-function updateScore(){
-  score +=1;
-  scoreText.innerText=score;
+function uppdateScore() {
+  score += 1;
+  scoreText.innerText = score;
 };
 
 function showQuestion(question) {
-  questionElement.innerText=question.question
-  question.answers.forEach(answer=> {
-    let button=document.createElement("button")
-    button.innerText=answer.text
+  questionElement.innerText = question.question
+  question.answers.forEach(answer => {
+    let button = document.createElement("button")
+    button.innerText = answer.text
     button.classList.add("btn")
-    if (answer.correct) 
-{
-      button.dataset.correct=answer.correct
+    if (answer.correct) {
+      button.dataset.correct = answer.correct
     }
     button.addEventListener("click", selectAnswer)
     answerButtonsElement.appendChild(button)
   })
- };
- function resetState (){
-   clearStatusClass(document.body)
-   nextButton.classList.add("hide")
-   while(answerButtonsElement.firstChild) {
+};
+function resetState() {
+  clearStatusClass(document.body)
+  nextButton.classList.add("hide")
+
+
+  while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild)
   }
 };
-function selectAnswer (e) {
-  let selectedButton=e.target
-  let correct =selectedButton.dataset.correct
+function selectAnswer(e) {
+  let selectedButton = e.target
+  let correct = selectedButton.dataset.correct
+  console.log(selectedButton)
+  
+  // tries update score or not
   setStatusClass(document.body, correct)
-  Array.from(answerButtonsElement.children).forEach(button=> {
-    setStatusClass (button, button.dataset.correct)
-  })
-  if(correct){
-    updateScore();
-  }
-  if (shuffledQuestions.length > currentQuestionIndex +1) { 
+
+  
+
+  if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove("hide")
-  } else{
-    startButton.innerText="Restart"
-    startButton.classList.remove="hide"
+  } else {
+    startButton.innerText = "Restart"
+    startButton.classList.remove("hide")
+
   }
 };
-  
+
 
 function setStatusClass(element, correct) {
   clearStatusClass(element)
+  console.log(correct)
   if (correct) {
+    uppdateScore();
     element.classList.add("correct")
+    
   }
-  else {element.classList.add("wrong")
+  else {
+    element.classList.add("wrong")
+
   }
 }
-function clearStatusClass (element) {
+function clearStatusClass(element) {
   element.classList.remove("correct")
- element.classList.remove("wrong")
+  element.classList.remove("wrong")
+  
 }
 // Creates two paralell arrays to compare between swedish and english words for the basic level
-let question=[
-  { question:"hej",
-  answers: [
-    { text: "hi", correct: true},
-    { text: "come", correct: false},
-    { text: "eat", correct: false},
-    { text: "drink", correct: false},
-  ]
-},{ question:"kom",
-answers: [
-  { text: "drink", correct: false},
-    { text: "read", correct: false},
-  { text: "eat", correct: false},
-  { text: "come", correct: true},
-]
-},{ question:"morgon",
-answers: [
-  { text: "evening", correct: false},
-  { text: "night", correct: false},
-  { text: "morning", correct: true},
-    { text: "afternoon", correct: false},
-  ]
-}
-    ,{ question:"hjälp",
+let question = [
+  {
+    question: "hej",
     answers: [
-      { text: "go", correct: false},
-        { text: "come", correct: false},
-      { text: "breath", correct: false},
-      { text: "help", correct: true},
+      { text: "hi", correct: true },
+      { text: "come", correct: false },
+      { text: "eat", correct: false },
+      { text: "drink", correct: false },
     ]
-    },
-    { question:"kväll",
-answers: [
-  { text: "night", correct: false},
-    { text: "run", correct: false},
-  { text: "evening", correct: true},
-  { text: "bite", correct: true},
-]
-},
-{ question:"kompis",
-answers: [
-  { text: "someone", correct: false},
-    { text: "write", correct: false},
-  { text: "neighbour", correct: false},
-  { text: "friend", correct: true},
-]
-},
-{ question:"granne",
-answers: [
-  { text: "neigbour", correct: true},
-    { text: "stranger", correct: false},
-  { text: "eat", correct: false},
-  { text: "come", correct: false},
-]
-},
-{ question:"leka",
-answers: [
-  { text: "dance", correct: false},
-    { text: "breathe", correct: false},
-  { text: "like", correct: false},
-  { text: "play", correct: true},
-]
-},
-{ question:"vit",
-answers: [
-  { text: "violet", correct: false},
-    { text: "brown", correct: false},
-  { text: "white", correct: true},
-  { text: "red", correct: false},
-]
-},
-{ question:"kläder",
-answers: [
-  { text: "t-shirt", correct: false},
-    { text: "trouser", correct: false},
-  { text: "tie", correct: false},
-  { text: "clothes", correct: true},
-]
-},
-{ question:"svart",
-answers: [
-  { text: "grey", correct: false},
-    { text: "red", correct: false},
-  { text: "blue", correct: false},
-  { text: "black", correct: true},
-]
-},
-{ question:"måndag",
-answers: [
-  { text: "holiday", correct: false},
-    { text: "monday", correct: true},
-  { text: "birthday", correct: false},
-  { text: "sunday", correct: false},
-]
-},{ question:"röd",
-answers: [
-  { text: "red", correct: true},
-    { text: "green", correct: false},
-  { text: "grey", correct: false},
-  { text: "yellow", correct: false},
-]
-},
-{ question:"onsdag",
-answers: [
-  { text: "saturday", correct: false},
-    { text: "friday", correct: false},
-  { text: "wednesday", correct: true },
-  { text: "come", correct: false},
-]
-},
-{ question:"lördag",
-answers: [
-  { text: "monday", correct: false},
-    { text: "birthday", correct: false},
-  { text: "weekend", correct: false},
-  { text: "saturday", correct: true},
-]
-},
-{ question:"hejdå",
-answers:[ 
-  { text: "drink", correct: false},
-    { text: "swallow", correct: false},
-  { text: "enjoy", correct: false},
-  { text: "bye", correct: true},
-]
-}
+  }, {
+    question: "kom",
+    answers: [
+      { text: "drink", correct: false },
+      { text: "read", correct: false },
+      { text: "eat", correct: false },
+      { text: "come", correct: true },
+    ]
+  }, {
+    question: "morgon",
+    answers: [
+      { text: "evening", correct: false },
+      { text: "night", correct: false },
+      { text: "morning", correct: true },
+      { text: "afternoon", correct: false },
+    ]
+  }
+  , {
+    question: "hjälp",
+    answers: [
+      { text: "go", correct: false },
+      { text: "come", correct: false },
+      { text: "breath", correct: false },
+      { text: "help", correct: true },
+    ]
+  },
+  {
+    question: "kväll",
+    answers: [
+      { text: "night", correct: false },
+      { text: "run", correct: false },
+      { text: "evening", correct: true },
+      { text: "bite", correct: true },
+    ]
+  },
+  {
+    question: "kompis",
+    answers: [
+      { text: "someone", correct: false },
+      { text: "write", correct: false },
+      { text: "neighbour", correct: false },
+      { text: "friend", correct: true },
+    ]
+  },
+  {
+    question: "granne",
+    answers: [
+      { text: "neigbour", correct: true },
+      { text: "stranger", correct: false },
+      { text: "eat", correct: false },
+      { text: "come", correct: false },
+    ]
+  },
+  {
+    question: "leka",
+    answers: [
+      { text: "dance", correct: false },
+      { text: "breathe", correct: false },
+      { text: "like", correct: false },
+      { text: "play", correct: true },
+    ]
+  },
+  {
+    question: "vit",
+    answers: [
+      { text: "violet", correct: false },
+      { text: "brown", correct: false },
+      { text: "white", correct: true },
+      { text: "red", correct: false },
+    ]
+  },
+  {
+    question: "kläder",
+    answers: [
+      { text: "t-shirt", correct: false },
+      { text: "trouser", correct: false },
+      { text: "tie", correct: false },
+      { text: "clothes", correct: true },
+    ]
+  },
+  {
+    question: "svart",
+    answers: [
+      { text: "grey", correct: false },
+      { text: "red", correct: false },
+      { text: "blue", correct: false },
+      { text: "black", correct: true },
+    ]
+  },
+  {
+    question: "måndag",
+    answers: [
+      { text: "holiday", correct: false },
+      { text: "monday", correct: true },
+      { text: "birthday", correct: false },
+      { text: "sunday", correct: false },
+    ]
+  }, {
+    question: "röd",
+    answers: [
+      { text: "red", correct: true },
+      { text: "green", correct: false },
+      { text: "grey", correct: false },
+      { text: "yellow", correct: false },
+    ]
+  },
+  {
+    question: "onsdag",
+    answers: [
+      { text: "saturday", correct: false },
+      { text: "friday", correct: false },
+      { text: "wednesday", correct: true },
+      { text: "come", correct: false },
+    ]
+  },
+  {
+    question: "lördag",
+    answers: [
+      { text: "monday", correct: false },
+      { text: "birthday", correct: false },
+      { text: "weekend", correct: false },
+      { text: "saturday", correct: true },
+    ]
+  },
+  {
+    question: "hejdå",
+    answers: [
+      { text: "drink", correct: false },
+      { text: "swallow", correct: false },
+      { text: "enjoy", correct: false },
+      { text: "bye", correct: true },
+    ]
+  }
 
 ];
 

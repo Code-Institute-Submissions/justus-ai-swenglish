@@ -50,7 +50,7 @@ The next button is hdden and only activated when the game has started .
 7. the point of the game is to maintain a green screen always and avoid having redscreen background.
 8. goodluck
 ### JAVASCRIPT
-1. The purpose of javasript is to activate the interactive game with 20 random prewritten questions.
+1. The purpose of javasript is to activate the interactive game with 16 random prewritten questions.
 2, the start button launches the game that has four multiple choices.
 3. if you choose the right answer, the background body turns green to show you are right and red if the answer is wrong.
 5.A restart button comes up when the player has gone through all the questions.
