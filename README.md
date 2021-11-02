@@ -79,12 +79,22 @@ and the width of the button container as shown below![Screenshot (297)](https://
 2. CSS-No errors were returned when passing through the official w3c validator
 3. javascript on the console after pressing f12 , no errors passing through there either.
 
-### Deployment
+## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub) 
+The site was deployed to GitHub pages. The steps to deploy are as follows:
 
-- The site was deployed to GitHub pages. The steps to deploy are as follows: 
-  - In the GitHub repository, navigate to the Settings tab 
-  - From the source section drop-down menu, select the Master Branch
-  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+- In the GitHub [repository](https://github.com/justus-ai/swenglish), navigate to the Settings tab.
+- From the source section drop-down menu, select the `Main` Branch.
+- Once the Main branch has been selected and saved, the page will be automatically refreshed with a detailed ribbon displayed to indicate the successful deployment.
+
+The live link can be found here - https://justus-ai.github.io/swenglish/
+
+### Local Deployment
+
+In order to make a local copy of this project, you can type the following into your IDE Terminal to clone this repository:
+
+- `git clone https://github.com/justus-ai/swenglish.git`
+
+Alternatively, if using Gitpod, you can [click here](https://gitpod.io/#https://github.com/justus-ai/swenglish), and it will create a brand new workspace on your own Gitpod account.
+
 
