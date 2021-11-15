@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- font awesome and google fonts -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+     <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+     <title>Game page</title>
+ <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="game.css">
+   
+</head>
+<body>
+  <div class="container">
+      <div id="game" class="justify-center flex-column">
+         <div id="hud">
+              <div class="hud-item">
+                  <p id ="progressText" class="hud-prefix"  id="question-container" class="hide">
+                      Question
+                    </p>
+                    <div id="progressbar">
+                        <div id="progressBarFull"></div>
+                    </div>
+                    </div>
+                    <div class="hud-item">
+                        <p class="hud-prefix">Score</p>
+                        <h1 class="hud-main-text" id="score">
+                            0
+                        </h1>
+                    </div>
+                </div>
+                   <div id="question"> What is the answer to this question?</div> 
+                   <div class="choice container">
+                       <p class="choice-prefix">A</p>
+                       <p class="choice-text" data-number="1">choice 1</p>
+                   </div>    
+                   <div class="choice container">
+                    <p class="choice-prefix">B</p>
+                    <p class="choice-text" data-number="2">choice 2</p>
+                    <div class="choice container">
+                        <p class="choice-prefix">c</p>
+                        <p class="choice-text" data-number="3">choice 3</p>
+                    </div>   
+                    <div class="choice container">
+                        <p class="choice-prefix">A</p>
+                        <p class="choice-text" data-number="4">choice 4</p>
+                    </div>   
+                </div> 
+                </div>  
+                <!--div id"id="question-container" class="hide"></div>
+                <div id="answer-buttons" class="btn-grid"class="choice-container">
+                        <button class="btn wrong" class="choice-text" data-number="1">a)answer </button>
+                        <button class="btn "class="choice-text" data-number="2">b)answer </button>
+                        <button class="btn" class="choice-text" data-number="3">c)answer </button>
+                        <button class="btn"  class="choice-text" data-number="4">answer </button>
+                       </div>
+                   </div>
+                         <div class="controls">
+               <buttton id="start-btn" class="start-btn btn"> start</buttton>
+               <button id="next-btn" class="next-btn btn hide">Next</button>
+                         </div>
+                       </div>
+                   </div>
+               </div>
+                  </p>
+
+                  <score-->
+            
+  <script src="assets/js/game.js"></script>
+</body>
+</html>
