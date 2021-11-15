@@ -2,259 +2,246 @@
 /* jshint esversion: 8*/
 //starting game 
 
+const question = document.querySelector(“#question”);
+const choices = Array.from(document.querySelectorAll(“.choice-text”);
+const progressText =document.querySelector(“#progressText”);
+const scoreText = document.querySelector(“#score”);
+progressBarFull=document.querySelector(#progressBarFull”);
 
-let startButton = document.getElementById("start-btn");
-
-let nextButton = document.getElementById("next-btn");
-
-let questionContainerElement = document.getElementById("question-container");
-
-let questionElement = document.getElementById("question");
-
-let answerButtonsElement = document.getElementById("answer-buttons");
-
-let scoreText = document.querySelector('#score');
-let progressBarFull = document.querySelector("#progressBarFull");
-let shuffledQuestions, currentQuestionIndex;
-let score = 16;
-let MAX_QUESTIONS = 16;
-
-startButton.addEventListener("click", startGame);
-
-nextButton.addEventListener("click", () => {
-  currentQuestionIndex++
-  setNextQuestion()
-});
-
-function startGame() {
-  startButton.classList.add("hide")
-
-  shuffledQuestions = question.sort(() => Math.random() - .5)
-
-  currentQuestionIndex = 0
-  questionCounter = 0
-  score = 0
-  MAX_QUESTIONS = 16
-  SCORE_POINTS = 16
-  questionContainerElement.classList.remove("hide")
-  setNextQuestion()
-};
-
-function setNextQuestion() {
-  resetState()
-  showQuestion(shuffledQuestions[currentQuestionIndex])
-};
-
-function uppdateScore() {
-  score += 1;
-  scoreText.innerText = score;
-};
-
-function showQuestion(question) {
-  questionElement.innerText = question.question
-  question.answers.forEach(answer => {
-    let button = document.createElement("button")
-    button.innerText = answer.text
-    button.classList.add("btn")
-    if (answer.correct) {
-      button.dataset.correct = answer.correct
-    }
-    button.addEventListener("click", selectAnswer)
-    answerButtonsElement.appendChild(button)
-  })
-};
-function resetState() {
-  clearStatusClass(document.body)
-  nextButton.classList.add("hide")
-
-
-  while (answerButtonsElement.firstChild) {
-    answerButtonsElement.removeChild(answerButtonsElement.firstChild)
-  }
-};
-function selectAnswer(e) {
-  let selectedButton = e.target
-  let correct = selectedButton.dataset.correct
-  console.log(selectedButton)
-  
-  // tries update score or not
-  setStatusClass(document.body, correct)
-
-  
-
-  if (shuffledQuestions.length > currentQuestionIndex + 1) {
-    nextButton.classList.remove("hide")
-  } else {
-    startButton.innerText = "Restart"
-    startButton.classList.remove("hide")
-
-  }
-};
-
-
-function setStatusClass(element, correct) {
-  clearStatusClass(element)
-  console.log(correct)
-  if (correct) {
-    uppdateScore();
-    element.classList.add("correct")
-
-  }
-  else {
-    element.classList.add("wrong")
-
-  }
-}
-function clearStatusClass(element) {
-  element.classList.remove("correct")
-  element.classList.remove("wrong")
-  
-}
-// Creates two paralell arrays to compare between swedish and english words for the basic level
-let question = [
-  {
+let currentQuestion={}
+let acceptingAnswers=true
+let score= 0
+let questionCounter = 0
+let availableQuestions =  []
+  let questions=[
+{
     question: "hej",
     answers: [
-      { text: "hi", correct: true },
-      { text: "come", correct: false },
-      { text: "eat", correct: false },
-      { text: "drink", correct: false },
+      { choice1: "hi", correct: true },
+      { choice2: "come", correct: false },
+      { choice3: "eat", correct: false },
+      { choice4: "drink", correct: false },
+      { answer: 1 },
     ]
   }, {
     question: "kom",
     answers: [
-      { text: "drink", correct: false },
-      { text: "read", correct: false },
-      { text: "eat", correct: false },
-      { text: "come", correct: true },
+      { choice1: "drink", correct: false },
+      { choice2: "read", correct: false },
+      { choice3: "eat", correct: false },
+      { choice4: "come", correct: true },
+      { answer: 4 },
     ]
   }, {
     question: "morgon",
     answers: [
-      { text: "evening", correct: false },
-      { text: "night", correct: false },
-      { text: "morning", correct: true },
-      { text: "afternoon", correct: false },
+      { choice1: "evening", correct: false },
+      { choice2: "night", correct: false },
+      { choice3: "morning", correct: true },
+      { choice4: "afternoon", correct: false },
+      { answer: 3 },
     ]
   }
   , {
     question: "hjälp",
     answers: [
-      { text: "go", correct: false },
-      { text: "come", correct: false },
-      { text: "breath", correct: false },
-      { text: "help", correct: true },
+      { choice1: "go", correct: false },
+      { choice2: "come", correct: false },
+      { choice3: "breath", correct: false },
+      { choice4: "help", correct: true },
+      { answer: 4 },
     ]
   },
   {
     question: "kväll",
     answers: [
-      { text: "night", correct: false },
-      { text: "run", correct: false },
-      { text: "evening", correct: true },
-      { text: "bite", correct: true },
+      { choice1: "night", correct: false },
+      { choice2: "run", correct: false },
+      { choice3: "evening", correct: true },
+      { choice4: "bite", correct: false },
+      { answer: 3 },
     ]
   },
   {
     question: "kompis",
     answers: [
-      { text: "someone", correct: false },
-      { text: "write", correct: false },
-      { text: "neighbour", correct: false },
-      { text: "friend", correct: true },
+      { choice1: "someone", correct: false },
+      { choice2: "write", correct: false },
+      { choice3: "neighbour", correct: false },
+      { choice4: "friend", correct: true },
+      { answer: 4 },
     ]
   },
   {
     question: "granne",
     answers: [
-      { text: "neigbour", correct: true },
-      { text: "stranger", correct: false },
-      { text: "eat", correct: false },
-      { text: "come", correct: false },
+      { choice1: "neigbour", correct: true },
+      { choice2: "stranger", correct: false },
+      { choice3: "eat", correct: false },
+      { choice4: "come", correct: false },
+      { answer: 1 },
     ]
   },
   {
     question: "leka",
     answers: [
-      { text: "dance", correct: false },
-      { text: "breathe", correct: false },
-      { text: "like", correct: false },
-      { text: "play", correct: true },
+      { choice1: "dance", correct: false },
+      { choice2: "breathe", correct: false },
+      { choice3: "like", correct: false },
+      { choice4: "play", correct: true },
+      { answer: 4 },
     ]
   },
   {
     question: "vit",
     answers: [
-      { text: "violet", correct: false },
-      { text: "brown", correct: false },
-      { text: "white", correct: true },
-      { text: "red", correct: false },
+      { choice1: "violet", correct: false },
+      { choice2: "brown", correct: false },
+      { choice3: "white", correct: true },
+      { choice4: "red", correct: false },
+      { answer: 3 },
     ]
   },
   {
     question: "kläder",
     answers: [
-      { text: "t-shirt", correct: false },
-      { text: "trouser", correct: false },
-      { text: "tie", correct: false },
-      { text: "clothes", correct: true },
+      { choice1: "t-shirt", correct: false },
+      { choice2: "trouser", correct: false },
+      { choice3: "tie", correct: false },
+      { choice4: "clothes", correct: true },
+      { answer: 4 },
     ]
   },
   {
     question: "svart",
     answers: [
-      { text: "grey", correct: false },
-      { text: "red", correct: false },
-      { text: "blue", correct: false },
-      { text: "black", correct: true },
+      { choice1: "grey", correct: false },
+      { choice2: "red", correct: false },
+      { choice3: "blue", correct: false },
+      { choice4: "black", correct: true },
+      { answer: 4 },
     ]
   },
   {
     question: "måndag",
     answers: [
-      { text: "holiday", correct: false },
-      { text: "monday", correct: true },
-      { text: "birthday", correct: false },
-      { text: "sunday", correct: false },
+      { choice1: "holiday", correct: false },
+      { choice2: "monday", correct: true },
+      { choice3: "birthday", correct: false },
+      { choice4: "sunday", correct: false },
+      { answer: 2 },
     ]
   }, {
     question: "röd",
     answers: [
-      { text: "red", correct: true },
-      { text: "green", correct: false },
-      { text: "grey", correct: false },
-      { text: "yellow", correct: false },
+      { choice1: "red", correct: true },
+      { choice2: "green", correct: false },
+      { choice3: "grey", correct: false },
+      { choice4: "yellow", correct: false },
+      { answer: 1 },
     ]
   },
   {
     question: "onsdag",
     answers: [
-      { text: "saturday", correct: false },
-      { text: "friday", correct: false },
-      { text: "wednesday", correct: true },
-      { text: "come", correct: false },
+      { choice1: "saturday", correct: false },
+      { choice2: "friday", correct: false },
+      { choice3: "wednesday", correct: true },
+      { choice4: "come", correct: false },
+      { answer: 3 },
     ]
   },
   {
     question: "lördag",
     answers: [
-      { text: "monday", correct: false },
-      { text: "birthday", correct: false },
-      { text: "weekend", correct: false },
-      { text: "saturday", correct: true },
+      { choice1: "monday", correct: false },
+      { choice2: "birthday", correct: false },
+      { choice3: "weekend", correct: false },
+      { choice4: "saturday", correct: true },
+      { answer: 4 },
     ]
   },
   {
     question: "hejdå",
     answers: [
-      { text: "drink", correct: false },
-      { text: "swallow", correct: false },
-      { text: "enjoy", correct: false },
-      { text: "bye", correct: true },
+      { choice1: "drink", correct: false },
+      { choice2: "swallow", correct: false },
+      { choice3: "enjoy", correct: false },
+      { choice4: "bye", correct: true },
+      { answer: 4 },
     ]
   }
 
 ];
 
-/* keeping track of the score*/
+const SCORE_POINTS = 100
+const MAX_QUESTIONS= 16
+startGame = () => {
+    questionCounter= 0
+    score = 0
+    availableQuestions = […questions]
+    getNewQuestions ()
+}
+
+
+getNewQuestion=() => {
+  if (availableQuestions.length ===0 ||questionsCounter >MAX_QUESTIONS) {
+    localStorage.setItem('mostRecentScore',score)
+    return window.location.assign('/end.html')
+}
+
+questionsCounter++
+progressText.innerText= `Question ${questionCounter}of ${MAX_QUESTIONS}´
+progressBarFull.style.width= `$ {(questionCounter/MAX_QUESTIONS)*100}%´
+
+const questionsIndex=Math.floor(Math.random() * availableQuestions.length)
+currentQuestion=availableQuestions[questionsIndex]
+question.innerText=currentQuestion.question
+
+choices.forEach(choice=>{
+  const number=choice.dataset ['number']
+  choice.innerText=currentQuestion ['button'+number]
+})
+availableQuestions.splice(questionsIndex,1)
+acceptingAnswers=true
+};
+choices.forEach(Choice=>{
+  choice.addEventListener('click',e =>{
+    if(!acceptingAnswers) return
+    
+    acceptingAnswers=false
+    const selectedChoice=e.target
+    const selectedAnswer=selectedChoice.dataset ['number']
+    
+    let classToApply=selectedAnswer==currentQuestion.answer  ?'correct':'incorrect'
+    if(classToApply==='correct'){
+      incrementscore(SCORE_POINTS)}
+      selectedChoice.parentElement.classList.add(classToApply)
+      setTimeout(() => {
+        selectedChoice.parentElement.classList.remove(classToApply)
+        getNewQuestion()
+      },1000)
+    })
+})
+
+incrementscore=num=> {
+  score +=num
+  scoreText.innerText=score
+}
+startGame()
+  Array.from(answerButtonsElement.children).forEach(button => {
+    setStatusClass(button, button.dataset.correct)
+  })
+
+
+
+
+
+
+
+
+
+
+
+
 
