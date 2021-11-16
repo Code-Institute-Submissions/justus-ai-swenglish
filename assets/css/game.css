@@ -18,3 +18,54 @@ body {
     transform: scale(1.02);
     transform: transform 100ms;
  }
+ .choice-prefix { 
+  padding: 2rem 2.5rem;
+  color: white;
+}
+.choice-text { 
+   padding: 2rem;
+   width: 100%;
+ }
+ 
+.correct { 
+   background-color: hsl(var(--hue-correct),100%,20%);
+
+}
+.wrong { 
+   background-color: hsl(var(--hue-wrong),100%,20%);
+}
+/*heads up didplay */
+#hud { 
+    display: flex;
+    justify-content: space-between;
+
+ }
+ .hud-prefix { 
+    text-align: center;
+    font-size: 3rem;
+ }
+
+  #progressBar { 
+     background-color: hsl(var(--hue-wrong),100%,20%);
+  }
+  .hud-main-text {
+   text-align: center;
+}   
+#progressBar { 
+   width: 20rem;
+   height: 3rem;
+   border:0.2rem solid rgb(3, 153, 20);
+   margin-top: 2rem;
+   border-radius: 50px;
+   overflow: hidden;
+
+  }  
+  #progressBarFull { 
+ height:100%;
+background:rgb(3, 153, 20);
+width:0%;
+ @media screen and (max-width: 760px) {
+    .choice-container { 
+  max-width: 40rem;
+  
+ }

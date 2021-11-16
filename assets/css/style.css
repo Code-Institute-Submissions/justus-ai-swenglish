@@ -172,22 +172,7 @@ margin:0 auto;
         font-size: 2rem;
         margin-bottom: 50%;
     }
-    .hud-main-text {
-        text-align: center;
-    }   
-    #progressBar { 
-        width: 20rem;
-        height: 3rem;
-        border:0.2rem solid rgb(3, 153, 20);
-        margin-top: 2rem;
-        border-radius: 50px;
-        overflow: hidden;
-
-       }  
-       #progressBarFull  { 
-      height:100%;
-    background:rgb(3, 153, 20);
-    width:0%;
+   
     
 } 
 /* --------- Media queries */
