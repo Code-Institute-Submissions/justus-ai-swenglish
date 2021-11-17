@@ -228,39 +228,36 @@ choices.forEach(choice => {
 availableQuestions.splice(questionsIndex, 1);
 acceptingAnswers = true;
 
-}
+};
 choices.forEach(choice => {
 	choice.addEventListener('click', e => {
 		if (!acceptingAnswers) return;
 
-		acceptingAnswers = false
-		const selectedChoice = e.target
-		const selectedAnswer = selectedChoice.dataset['number']
+		acceptingAnswers = false;
+		const selectedChoice = e.target; 
+		const selectedAnswer = selectedChoice.dataset['number'];
 
 		let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 
-		'incorrect'
+		'incorrect';
 		if (classToApply === 'correct') {
-			incrementscore(SCORE_POINTS)
+			incrementscore(SCORE_POINTS);
 		}
-		selectedChoice.parentElement.classList.add(classToApply)
+		selectedChoice.parentElement.classList.add(classToApply);
 		setTimeout(() => {
-			selectedChoice.parentElement.classList.remove(classToApply)
-			getNewQuestion()
+			selectedChoice.parentElement.classList.remove(classToApply);
+			getNewQuestion();
 
 
-		}, 1000)
-	})
-})
+		}, 1000);
+	});
+});
 
 incrementscore = num => {
-	score += num
-	scoreText.innerText = score
-}
-startGame()
+	score += num;
+	scoreText.innerText = score;
+};
+startGame();
   
-
-
-
 
 
 
