@@ -109,30 +109,18 @@ let questions = [{
 		
 	}, {
 		question: "leka",
-	
 			choice1: "dance",
-	
-	
 			choice2: "breathe",
-
-		}, {
 			choice3: "like",
-
 			choice4: "play",
 			correct: true
 		}, {
 			answer: 4
 		},  {
 		question: "vit",
-		
 			choice1: "violet",
-			
-		
 			choice2: "brown",
-			
-		
 			choice3: "white",
-	
 			choice4: "red",
 
 			answer: 3
@@ -189,12 +177,10 @@ let questions = [{
 			choice2: "friday",
 			choice3: "wednesday",
 			choice4: "come",
-
 			answer: 3,
 	}, {
 		question: "lördag",
 			choice1: "monday",
-
 			choice2: "birthday",
 			choice3: "weekend",
 			choice4: "saturday",
@@ -251,7 +237,8 @@ choices.forEach(choice => {
 		const selectedChoice = e.target
 		const selectedAnswer = selectedChoice.dataset['number']
 
-		let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'wrong'
+		let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 
+		'incorrect'
 		if (classToApply === 'correct') {
 			incrementscore(SCORE_POINTS)
 		}
