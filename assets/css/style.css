@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 
 :root {
-    background-color: rgb(28,26, 26)
- }
+    background: url(../images/background.jpg);opacity:1.6;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+  }
+
+ 
 
  
 /* ---------  styling Heading */
@@ -13,15 +18,20 @@
     font-size: 62.5% ;
     font-family: 'Fredericka the Great', cursive;
 }
-h1 {
+
+  h1 {
     font-size:5.4rem;
     color:#fff;
     margin-bottom: 5rem;
+    text-shadow: 0 0 3px #1f1d1d, 0 0 5px #08083a;
+    
+    
 } 
 h2 {
    font-size: 2.0rem;
-   color: green;
+   color: rgb(15, 15, 15);
    margin-bottom: 4rem;
+   text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
 
 
@@ -81,7 +91,7 @@ margin:0 auto;
  }
 .btn:hover {
     cursor:pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(8, 114, 244, 0.6);
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(23, 29, 36, 0.6);
     transition:transform 150ms;
     tranform: scale(1.03);
    border-color: whitesmoke;
