@@ -63,7 +63,7 @@ let questions = [{
 
 		choice4: "help",
 
-		answer: 4,
+		answer: 4
 
 	}, {
 		question: "kväll",
@@ -92,7 +92,7 @@ let questions = [{
 	
 			choice4: "friend",
 
-			answer: 4
+			answer: 4,
 	
 	}, {
 		question: "granne",
@@ -105,7 +105,7 @@ let questions = [{
 
 			choice4: "come",
 
-			answer: 1
+			answer: 1,
 		
 	}, {
 		question: "leka",
@@ -113,9 +113,7 @@ let questions = [{
 			choice2: "breathe",
 			choice3: "like",
 			choice4: "play",
-			correct: true
-		}, {
-			answer: 4
+			answer: 4,
 		},  {
 		question: "vit",
 			choice1: "violet",
@@ -123,37 +121,26 @@ let questions = [{
 			choice3: "white",
 			choice4: "red",
 
-			answer: 3
+			answer: 3,
 		}, 
   
 	 {
 		question: "kläder",
 		
 			choice1: "t-shirt",
-		
-		
 			choice2: "trouser",
-
 			choice3: "tie",
-		
-
 			choice4: "clothes",
-			answer: 4
+			answer: 4,
 		
 		}, 
 	 {
 		question: "svart",
-		
 			choice1: "grey",
-	
 			choice2: "red",
-		
 			choice3: "blue",
-
 			choice4: "black",
-	
-		
-			answer: 4
+			answer: 4,
 	}, {
 		question: "måndag",
 		  choice1: "holiday",
@@ -161,7 +148,7 @@ let questions = [{
 			choice3: "birthday",
 			choice4: "sunday",
 	
-			answer: 2
+			answer: 2,
 		}, {
 		question: "röd",
 			choice1:"red",
@@ -191,7 +178,7 @@ let questions = [{
 			choice2: "swallow",
 			choice3: "enjoy",
 			choice4: "bye",
-			answer: 4
+			answer: 4,
 		}, 
 
 ];
@@ -209,7 +196,7 @@ startGame = () => {
 getNewQuestion = () => {
 	if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
 		localStorage.setItem('mostRecentScore', score);
-		return window.location.assign('/end.html');
+		return window.location.assign('../end.html');
 	}
 
 questionCounter++
