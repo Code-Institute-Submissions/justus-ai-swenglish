@@ -116,6 +116,7 @@ margin:0 auto;
         
     
     #hud {
+        display:flexbox;
         font-size: 2rem;
         margin-bottom: 10%;
     }
