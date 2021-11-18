@@ -1,43 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
-/*, *::before, *::after {
-    box-sizing: border-box;
-    font-family: 'Rampart One', cursive;
-  }
+
 :root {
---hue-neutral: 200;
---hue-wrong: 0;
---hue-correct: 145;
-}
-*/
-:root {
-    background-color: rgb(28,26, 26) }
-    /*
-body {
-    --hue:var(--hue-neutral);
-    font-family: 'Fredericka the Great', cursive;
-    text-align: center;
-    align-items: center;
-    padding: 0;
-    margin:0;
-    justify-content: center;
-    height: 100vh;
-    background-color: hsl(var(--hue-neutral),100%,20%);
-
-}
-
-.correct { 
-    background-color: hsl(var(--hue-correct),100%,20%);
-
+    background-color: rgb(28,26, 26)
  }
- .wrong { 
-    background-color: hsl(var(--hue-wrong),100%,20%);
- }
+
+ 
 /* ---------  styling Heading */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 60% ;
+    font-size: 62.5% ;
     font-family: 'Fredericka the Great', cursive;
 }
 h1 {
@@ -50,16 +23,8 @@ h2 {
    color: green;
    margin-bottom: 4rem;
 }
-.heading-container {
-    margin-left: 70px;
-}
 
-.logo {
-    margin-top: 0%;
-    border-radius: 7px;
-    align-items: center;
-    justify-content: center;
-}
+
 .flex-column {
     display:flex;
     flex-direction: column;
@@ -118,7 +83,7 @@ margin:0 auto;
     cursor:pointer;
     box-shadow: 0 0.4rem 1.4rem 0 rgba(8, 114, 244, 0.6);
     transition:transform 150ms;
-    tranform:scale(1.03);
+    tranform: scale(1.03);
    border-color: whitesmoke;
 }
 .btn[disabled]:hover {
@@ -127,15 +92,7 @@ margin:0 auto;
    transform:none;
  }
 
- .start-btn, .next-btn {
-   font-size: 2rem;
-   padding: 10px 20px;
- }
- .controls {
-     display :flex;
-     justify-content: center;
-    align-items: center;
-    }
+ 
     .hide  {
         display :none ;
      }
@@ -159,17 +116,15 @@ margin:0 auto;
         
     
     #hud {
-        display:center;
-        text-align: center;
         font-size: 2rem;
-        margin-bottom: 50%;
+        margin-bottom: 10%;
     }
    
     
-} 
+
 /* --------- Media queries */
 
- @media screen and (max-width: 800px) {
+ /*---@media screen and (max-width: 800px) {
     .logo {
       flex: 50%;
       max-width: 60%;
