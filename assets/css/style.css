@@ -1,13 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 
 :root {
-    background: url(../images/background.jpg);opacity:1.6;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: rgb(28,26, 26)
   
   }
-
- 
 
  
 /* ---------  styling Heading */
@@ -28,10 +24,14 @@
     
 } 
 h2 {
-   font-size: 2.0rem;
-   color: rgb(15, 15, 15);
+   font-size: 3.0rem;
+   color: rgb(233, 227, 227);
    margin-bottom: 4rem;
    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+   background: url(../images/logo.jpg),0.1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 60px;
 }
 
 
@@ -93,7 +93,7 @@ margin:0 auto;
     cursor:pointer;
     box-shadow: 0 0.4rem 1.4rem 0 rgba(23, 29, 36, 0.6);
     transition:transform 150ms;
-    tranform: scale(1.03);
+    transform: scale(1.03);
    border-color: whitesmoke;
 }
 .btn[disabled]:hover {
