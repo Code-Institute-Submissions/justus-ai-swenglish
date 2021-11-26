@@ -1,64 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+​
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- font awesome and google fonts -->
-     <title>Game page</title>
-     <link rel="stylesheet" href="assets/css/style.css">
-     <link rel="stylesheet" href="assets/css/game.css">
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-     <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
-     <title>Game page</title>
-     <link rel="stylesheet" href="assets/css/game.css">
-
-
-
-     
+    <!-- font awesome and google fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/game.css">
+    <title>Swenglish - Game</title>
 </head>
+​
 <body>
-  <div class="container">
-      <div id="game" class="justify-center flex-column">
-         <div id="hud">
-              <div class="hud-item">
-                  <p id ="progressText" class="hud-prefix">
-                      Question
+    <main class="container">
+        <div id="game" class="justify-center flex-column">
+​
+            <div id="hud">
+                <div class="hud-item">
+                    <!-- progress bar -->
+                    <p id="progressText" class="hud-prefix">
+                        Question
                     </p>
                     <div id="progressBar">
                         <div id="progressBarFull"></div>
                     </div>
-                    </div>
-                    <div class="hud-item">
-                        <p class="hud-prefix">Score
-                        </p>
-                        <h1 class="hud-main-text" id="score">
-                            0
-                        </h1>
-                    </div>
                 </div>
-                   <h1 id="question"> Some simple words to start?</h1> 
-                   <div class="choice-container">
-                       <p class="choice-prefix">A</p>
-                       <p class="choice-text" data-number="1">choice 1</p>
-                   </div>    
-                   <div class="choice-container">
-                       <p class="choice-prefix">B</p>
-                       <p class="choice-text" data-number="2">choice 2</p>
-                   </div>
-                    <div class="choice-container">
-                       <p class="choice-prefix">C</p>
-                       <p class="choice-text" data-number="3">choice 3</p>
-                    </div>   
-                    <div class="choice-container">
-                       <p class="choice-prefix">D</p>
-                       <p class="choice-text" data-number="4">choice 4</p>
-                    </div>   
-                </div> 
-                </div>  
-               
-            
-  <script src="assets/js/game.js"></script>
+                <div class="hud-item">
+                    <!-- home button -->
+                    <a href="index.html" class="btn home-btn">home</a>
+                    <!-- <br> -->
+                    <!-- restart button -->
+                    <a href="game.html" class="btn restart-btn">restart</a>
+                </div>
+                <div class="hud-item">
+                    <!-- player score -->
+                    <p class="hud-prefix">Score</p>
+                    <h1 class="hud-main-text" id="score">
+                        0
+                    </h1>
+                </div>
+            </div>
+​
+            <!-- insert the swedish word here -->
+            <h1 id="question"> Some simple words to start?</h1>
+​
+            <!-- input various options in english -->
+            <div class="choice-container">
+                <p class="choice-prefix">A</p>
+                <p class="choice-text" data-number="1">choice 1</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">B</p>
+                <p class="choice-text" data-number="2">choice 2</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">C</p>
+                <p class="choice-text" data-number="3">choice 3</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">D</p>
+                <p class="choice-text" data-number="4">choice 4</p>
+            </div>
+​
+        </div>
+    </main>
+​
+    <!-- scripts -->
+    <script src="assets/js/game.js"></script>
+​
 </body>
 </html>

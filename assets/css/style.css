@@ -88,7 +88,7 @@ margin:0 auto;
     margin-bottom: 1rem;
     text-decoration: none;
     outline: rgb(252, 250, 248);
-    margin:auto;
+    margin: 0.25em auto;
     border-radius: 4px;
  }
 .btn:hover {
@@ -177,10 +177,11 @@ input::placeholder  {
   input {
     margin-bottom: 1rem;
     width: 20rem;
-    padding:11.5rem;
+    padding:11.5rem 1em;
     font-size: 1.8rem;
     border: none;
     box-shadow: 0 0.1rem1.4rem0 rgba(86,185,235,0.5);
+    text-align: center;
   } 
   input::placeholder {
  color: #aaa;
