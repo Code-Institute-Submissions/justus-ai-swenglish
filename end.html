@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+​
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- font awesome and google fonts -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-xxzQGERXSOOkBmZW/6qxqJPyxW3UR0BPsL4cIWXva%kFi7TxkIIaMiKtqV1Q"crossorigin="anonymous">
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    
+    <title>Swenglish - Game End</title>
 </head>
+​
 <body>
-    <div class="container">
+    <main class="container">
         <div id="end" class="flex-center flex-column">
+            <!-- final score localStorage -->
             <h1 id="finalScore">0</h1>
             <form class="end-form-container">
                 <h2 id="end-text">Enter your Name below to save your score!</h2>
-                <input type="text" name="name" id="username" placeholder="Enter your name">
-                <button class=btn id="saveScoreBtn" type="submit" onclick="saveHighScore(event)" disabled>save</button>
+                <!-- username -->
+                <input type="text" name="name" id="username" placeholder="Enter your name" required>
             </form>
+            <!-- save score -->
+            <button class=btn id="saveScoreBtn" disabled>Save</button>
+            <!-- play again -->
             <a href="game.html" class="btn">Play Again</a>
+            <!-- return home -->
             <a href="index.html" class="btn">Go Home<i class="fas fa-home"></i></a>
         </div>
-    </div>
+    </main>
+​
+    <!-- scripts -->
     <script src="assets/js/end.js"></script>
+​
 </body>
 </html>
