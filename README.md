@@ -8,16 +8,14 @@ This website is built to  create interest in learning English  for children who 
 In sweden children generally do not learn English in school until when they turn 7 years old.
 Each school deciced when they will start to to tesch english And othre can strt as late as 10 years old .
 Even then , not all  speak it even with addition of English to their syllabus.
-With the  current globalisation and game inspired ways of learning, a game for children of earlier ages (4 years old and older; or younger based on individual reading ability.)
-![Screenshot (298)](https://user-images.githubusercontent.com/83753891/130938788-23441287-7dee-44f6-9039-a114d29195c3.png)
-##header 
-title= swenglish
-and a logo image of a child stacking up letter blocks,I got the picture from unsplash:
-Photo by Ryan Fields on Unsplash![ryan-fields-Xz7MMD5tZwA-unsplash][Link](https://user-images.githubusercontent.com/83753891/130231263-6183ac84-2b5b-4b4e-bbd7-c5223407a5fe.jpg)
+With the  current globalisation and game inspired ways of learning, a game for children of earlier ages (4 years old and older; or younger based on individual reading ability)would be an added incentive to keep learning.
+![Screenshot (498)]
+## SWENGLISH
+Initially i had a logo of a child stacking up blocks as a way to indicate that my website is meant for early learners , bit english can also be picked by adults new to english at any age so i decided ona dack background istead.
+
 ### Questions area.
  if question is answered wrongly
- ![Screenshot (295)](https://user-images.githubusercontent.com/83753891/130901580-b5a860fe-421f-4857-9381-56340cea213c.png)
-
+ 
  if question is answed correctly
  
 * ![Screenshot (294)](https://user-images.githubusercontent.com/83753891/130901089-49e2a192-0f18-45e6-9d74-456fe3054fba.png)

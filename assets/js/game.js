@@ -1,18 +1,18 @@
 /* jshint esversion: 8*/
-​
+
 // global variables
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
-​
+
 let progressBarFull = document.querySelector('#progressBarFull');
 let currentQuestion = {};
 let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
-let startGame, getNewQuestion, incrementscore;
+let startGame, getNewQuestion, incrementScore;
 ​
 let questions = [{
 	question: "hej",
@@ -187,7 +187,7 @@ choices.forEach(choice => {
 });
 ​
 // add points if correct answer
-incrementscore = num => {
+incrementScore = num => {
 	score += num;
 	scoreText.innerText = score;
 };
