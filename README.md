@@ -44,7 +44,7 @@ and for the mbile version as below :
 
 
 
-my itial from was similar to the love maths format because i could see the benefit of having all the features in one page.
+my initial formm was similar to the love maths format because i could see the benefit of having all the features in one page.
 * I also wanted to divide the game into different levels ; however i had to renconsider so as not  to complicate my code and eventually not finish in good time.
 * With the help of my  mentor Tim_Ci, we discussed a simpler format of one level and several random questions.
 * The fact that its a game  also had me considering adding  scores as well as  progress bar.I used the youtube tutorials by Brian design https://www.youtube.com/watch?v=f4fB9Xg2JEY&t=1468swill to help me reach my goala
@@ -53,7 +53,7 @@ my itial from was similar to the love maths format because i could see the benef
 
  ## Difficulties with the code
  I had trouble adding in the home button and restart button that were not part of the youtube tutorial , bit i finally figured it out and buttons are there for  enhanced user experience.
- the questions are random(thanks to the math.random) funtion on javascript. So at no point will the player start  the game with the same question. credit to [Link]https://www.youtube.com/watch?v=riDzcEQbX6k
+ I had also trouble saving names after the player has ended the game , i really struggled with that and still havent hfound a solution, otherwise the game works well.
  #### cleaaring old answers
  so for each time a player entered their answer, the game saved their answer, in order to clear that i used the resetState function that resets everything to the default state each time the player clicks on a new question.helpful code to solve this is a credit to Brian Design [Link]https://www.youtube.com/watch?v=f4fB9Xg2JEY&t=1323s
  #### linking html to js
@@ -64,9 +64,9 @@ start button that riderects to the game pageAnd the highscore button that redire
 
 ### Quiz instructions
 1. press the start button
-5. the game continues whther you click the right or te wrong answer with the next button on clicking wither option.
-6. the game goes on until you see the restard button eaning ithe end of the question list.
-7. the point of the game is to maintain a green screen always and avoid having redscreen background.
+5. the game continues whether you click the right or the wrong answer and shows on the progress bar how falr along one has come.
+6. the game goes on until all the 16 questions are ansered and redirects to an endpag whre one can save theär scores and their name .
+7. the point of the game maintain green color coded response always and avoid having red color choice background.
 8. goodluck
 ### JAVASCRIPT
 1. The purpose of javasript is to activate the interactive game with 16 random prewritten questions.
@@ -77,8 +77,11 @@ start button that riderects to the game pageAnd the highscore button that redire
 
 
 ### Media query
-for a responsive screen size i reduced the size of the logo 
-and the width of the button container as shown below![Screenshot (297)](https://user-images.githubusercontent.com/83753891/130902095-b75cdf85-8a63-47a2-b838-057408390ccb.png)
+For a responsive website , i wrote a media query for the different screen sizes as shown on the screen shots above , they all work perfectly on different screen sizes(the below screen shots are the ones not previously included)
+
+![image](https://user-images.githubusercontent.com/83753891/144045780-acb6e968-1112-4cbf-a112-4047ae4fb756.png)
+![image](https://user-images.githubusercontent.com/83753891/144045878-e1dd4863-aabf-448f-adfa-317e14ac5146.png)
+
 
 ### Validator testing
 1. HTML-No errors were returned when passing through the official w3c validator
