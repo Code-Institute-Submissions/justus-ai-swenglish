@@ -13,7 +13,7 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 let startGame, getNewQuestion, incrementScore;
-​
+
 let questions = [{
 	question: "hej",
 	choice1: "hi",
@@ -70,7 +70,7 @@ let questions = [{
 	choice3: "like",
 	choice4: "play",
 	answer: 4,
-}, {
+},{
 	question: "vit",
 	choice1: "violet",
 	choice2: "brown",
@@ -127,10 +127,10 @@ let questions = [{
 	choice4: "bye",
 	answer: 4,
 }];
-​
+
 const SCORE_POINTS = 100;
 const MAX_QUESTIONS = 16;
-​
+
 // start game function
 startGame = () => {
 	questionCounter = 0;
@@ -138,45 +138,45 @@ startGame = () => {
 	availableQuestions = [...questions];
 	getNewQuestion();
 };
-​
+
 // get the next question
 getNewQuestion = () => {
 	if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
 		localStorage.setItem('mostRecentScore', score);
 		return window.location.assign('end.html');
 	}
-​
+
 	questionCounter++;
 	progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
 	progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
-​
-​
+
+
 	const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
 	currentQuestion = availableQuestions[questionsIndex];
 	question.innerText = currentQuestion.question;
-​
+
 	choices.forEach(choice => {
 		const number = choice.dataset.number;
 		choice.innerText = currentQuestion['choice' + number];
 	});
-​
+
 	availableQuestions.splice(questionsIndex, 1);
 	acceptingAnswers = true;
-​
+
 };
-​
+
 // add click event to each question option
 choices.forEach(choice => {
 	choice.addEventListener('click', e => {
 		if (!acceptingAnswers) return;
-​
+
 		acceptingAnswers = false;
 		const selectedChoice = e.target;
 		const selectedAnswer = selectedChoice.dataset.number;
-​
+
 		let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 		if (classToApply === 'correct') {
-			incrementscore(SCORE_POINTS);
+			incrementScore(SCORE_POINTS);
 		}
 		selectedChoice.parentElement.classList.add(classToApply);
 		setTimeout(() => {
@@ -185,12 +185,12 @@ choices.forEach(choice => {
 		}, 1000);
 	});
 });
-​
+
 // add points if correct answer
 incrementScore = num => {
 	score += num;
 	scoreText.innerText = score;
 };
-​
+
 // call the startGame() function
 startGame();
